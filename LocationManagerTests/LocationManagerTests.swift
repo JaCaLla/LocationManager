@@ -18,7 +18,7 @@ struct ManagersTestTests {
         let sut = await LocationManager(clLocationManager: locationManagerMock)
         await sut.checkPermission()
         // Wait for the @Published speed property to update
-        try await Task.sleep(nanoseconds: 200_000_000)
+        try await Task.sleep(nanoseconds: 1_000_000)
         await #expect(sut.permissionGranted == false)
     }
 
@@ -29,7 +29,7 @@ struct ManagersTestTests {
         let sut = await LocationManager(clLocationManager: locationManagerMock)
         await sut.checkPermission()
         // Wait for the @Published speed property to update
-        try await Task.sleep(nanoseconds: 200_000_000)
+        try await Task.sleep(nanoseconds: 1_000_000)
         await #expect(sut.permissionGranted == true)
     }
     
@@ -40,7 +40,7 @@ struct ManagersTestTests {
         let sut = await LocationManager(clLocationManager: locationManagerMock)
         await sut.checkPermission()
         // Wait for the @Published speed property to update
-        try await Task.sleep(nanoseconds: 200_000_000)
+        try await Task.sleep(nanoseconds: 50_000_000)
                
         await #expect(sut.speed == 10.00)
     }

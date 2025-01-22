@@ -41,7 +41,6 @@ class LocationManager: NSObject, ObservableObject  {
         }
     }
     
-   // @MainActor
     init(clLocationManager: CLLocationManager = CLLocationManager()) {
         super.init()
         self.clLocationManager = clLocationManager
